@@ -1,0 +1,49 @@
+# Python environments and caches
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Build outputs
+build/
+dist/
+release/
+*.spec
+*.egg-info/
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.json
+secrets.json
+
+# Local application data / models
+.marcos_models/
+.marcos_dl_models/
+.marcos_rag/
+.marcos_finetunes/
+.marcos_deployments/
+.marcos_lstm_models/
+.marcos_nlp_models/
+.marcos_cnn_models/
+.marcos_mlops/
+workspace/
+logs/
+*.log
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

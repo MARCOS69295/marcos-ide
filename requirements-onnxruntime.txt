@@ -1,0 +1,2 @@
+# Inferência ONNX opcional em CPU
+onnxruntime>=1.18,<2

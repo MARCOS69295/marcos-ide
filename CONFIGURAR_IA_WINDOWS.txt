@@ -1,0 +1,44 @@
+MARCOS IDE 31.0 — CONFIGURAÇÃO DO GOOGLE GEMINI
+
+1. Acesse o Google AI Studio e crie uma chave de API Gemini:
+   https://aistudio.google.com/apikey
+
+2. Abra o PowerShell do Windows. Não cole sua chave em chats, documentos,
+   arquivos .py, HTML, JavaScript ou repositórios públicos.
+
+3. Execute os comandos abaixo, substituindo SUA_CHAVE_GEMINI pela chave real:
+
+[Environment]::SetEnvironmentVariable("GEMINI_API_KEY", "SUA_CHAVE_GEMINI", "User")
+[Environment]::SetEnvironmentVariable("GEMINI_MODEL", "gemini-3.8-flash", "User")
+
+4. Feche completamente a MARCOS IDE e abra novamente com iniciar_marcOS.bat.
+
+5. Abra http://127.0.0.1:8000/api/ai/status. O campo "available" deverá ser true e o provedor deverá aparecer como "Google Gemini".
+
+6. Abra o Assistente Gemini na IDE e clique em "Testar conexão real com Gemini".
+   Esse teste confirma uma chamada real à API; o endpoint /api/ai/status sozinho
+   apenas verifica se a variável GEMINI_API_KEY existe.
+
+MODELO E CONEXÃO
+- Provedor: Google Gemini API (REST generateContent).
+- Modelo padrão: gemini-3.8-flash.
+- A IDE usa a biblioteca padrão urllib; não exige SDK adicional do Google.
+- Para trocar o modelo, altere GEMINI_MODEL e reinicie a IDE.
+- Endpoint base opcional: GEMINI_API_BASE.
+
+SEGURANÇA E CUSTOS
+- A chave é lida exclusivamente pelo backend Python e não é enviada ao navegador.
+- Não coloque a chave no HTML, JavaScript, Git ou repositório público.
+- Não compartilhe sua chave de API.
+- Consulte os limites, disponibilidade e preços vigentes no Google AI Studio.
+- A assinatura ChatGPT não fornece créditos para a API Gemini.
+- Se a chave for exposta, revogue-a no Google AI Studio e crie outra.
+
+
+GERENCIADOR DE CONEXÃO 31.0
+- Use o botão “Listar modelos disponíveis” para consultar modelos visíveis à sua chave.
+- Selecione um modelo listado e clique em “Selecionar modelo”.
+- O botão “Testar conexão real com Gemini” valida a geração; listar um modelo não garante disponibilidade instantânea.
+- Retry limitado: HTTP 500/502/503/504. HTTP 429 não é repetido automaticamente para evitar chamadas inúteis em caso de quota esgotada.
+- Opcional: GEMINI_RETRY_ATTEMPTS (1 a 4), GEMINI_RETRY_BASE_SECONDS (1 a 15) e GEMINI_FALLBACK_MODELS (lista separada por vírgulas). Fallback deve ser explicitamente configurado com modelos que sua chave pode acessar.
+- A seleção de modelo pela interface dura até reiniciar o servidor; para persistir, configure GEMINI_MODEL no Windows.

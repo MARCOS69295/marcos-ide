@@ -1,0 +1,3 @@
+# Deep Learning opcional (CPU)
+# Para CUDA, escolha a build compatível no seletor oficial do PyTorch.
+torch>=2.2,<3

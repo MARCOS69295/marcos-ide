@@ -1,0 +1,22 @@
+MARCOS IDE 8.1.0 — correção aplicada
+
+1. Importado o módulo base64 em app.py, necessário para exportar o bytecode .marc.
+2. Atualizada a versão informada pela API para 8.1.0.
+
+Validações realizadas:
+- 11 testes automatizados: aprovados.
+- GET /: HTTP 200.
+- GET /health: HTTP 200.
+- WebSocket: conexão, execução, depuração, compilação/exportação .marc e comando :help testados.
+- Programa de exemplo da IDE executado com sucesso.
+
+Para iniciar no Windows:
+1. Extraia toda a pasta MARCOS_IDE_8.
+2. Instale Python 3.10 ou superior, se ainda não estiver instalado.
+3. Dê duplo clique em instalar_windows.bat e aguarde terminar.
+4. Dê duplo clique em iniciar_marcOS.bat.
+5. Abra http://127.0.0.1:8000 no navegador.
+
+Observação:
+A geração do aplicativo desktop .exe e do instalador Inno Setup deve ser feita no Windows.
+O editor carrega CodeMirror por CDN, portanto a primeira abertura do editor requer internet.

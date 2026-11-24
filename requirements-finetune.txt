@@ -1,0 +1,6 @@
+# Fine-tuning local de Transformers (instale no ambiente virtual da MARCOS IDE)
+torch>=2.2,<3
+transformers>=4.44,<6
+tokenizers>=0.19,<1
+datasets>=2.18,<5
+accelerate>=0.28,<2

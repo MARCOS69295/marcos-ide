@@ -1,0 +1,6 @@
+# Recursos opcionais da MARCOS IDE 17.0
+# Instale apenas se precisar de CNN, Transformers ou embeddings densos.
+Pillow>=10,<13
+transformers>=4.44,<6
+tokenizers>=0.19,<1
+sentence-transformers>=3,<6

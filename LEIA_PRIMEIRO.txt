@@ -1,0 +1,13 @@
+MARCOS IDE 31.0.0 — INTELLIGENT GEMINI CONNECTION MANAGER
+
+1. Extraia o ZIP em uma pasta nova.
+2. Execute instalar_windows.bat.
+3. Configure GEMINI_API_KEY no Windows e reinicie o terminal.
+4. Opcional: configure GEMINI_MODEL e política de retry conforme README.md.
+5. Execute iniciar_marcOS.bat e abra http://127.0.0.1:8000.
+6. No Assistente Gemini, clique em “Listar modelos disponíveis”, selecione um modelo e clique em “Selecionar modelo”.
+7. Clique em “Testar conexão real com Gemini” para validar uma geração.
+
+A listagem de modelos não garante disponibilidade instantânea. O retry é limitado e cobre somente falhas transitórias. Fallbacks são opcionais e devem ser modelos que sua chave realmente pode acessar.
+A chave permanece no servidor. Nunca a compartilhe ou inclua em capturas de tela.
+O instalador EXE precisa ser compilado e testado no Windows.
